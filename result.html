@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body style="background-color: #d8d8ff">
+
+
+
+<div class="results">
+{% if prediction == 1%}
+
+<h2 style="color: red;
+    text-align: center;
+    margin-top: 208px;"><b>It's a Catastrophe post!</b></h2>
+    <img style="width: 433px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;" src="https://thumbs.dreamstime.com/b/cartoon-earthquake-disaster-concept-card-poster-destruction-accident-elements-landscape-background-scene-flat-design-vector-139653478.jpg" >
+
+
+{% elif prediction == 0%}
+
+<h2 style="color: blue;
+    text-align: center;
+    margin-top: 208px;">Not a catastrophe post</h2>
+    <img src="https://i.ytimg.com/vi/NiZh-3aEmSo/maxresdefault.jpg" style="width: 433px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;">
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
